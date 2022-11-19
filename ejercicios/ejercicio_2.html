@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <link rel="stylesheet" type="text/css" href="ejercicio_2.css">
+    <!--<script src="ejercicio_2.js"></script>-->
+</head>
+<body>
+    <h1 id="enunciado">Realizar la conversión de una temperatura dada en grados
+         Centígrados a grados Fahrenheit (Fórmula: F = (9/5) C + 32)</h1>
+    <div>
+        <form name="calculo" action="">
+            <label><b></b></label>
+            <input type="text" name="temperatura_celcius">
+            <input type="button" value="Calcular" onclick="funcion_calcular()">
+            </form>
+    </div>
+    <script type="text/javascript">
+        function funcion_calcular()
+        {
+        var Tcelcius = document.calculo.temperatura_celcius.value;
+        var Tfahrenheit= Tcelcius*9/5+32;
+        alert ('la temperatura fahrenheit es: ' + Tfahrenheit);
+        }
+    </script>
+</body>
+</html>

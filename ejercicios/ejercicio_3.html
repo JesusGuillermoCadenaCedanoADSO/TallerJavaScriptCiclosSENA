@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <link rel="stylesheet" type="text/css" href="ejercicio_2.css">
+    <!--<script src="ejercicio_2.js"></script>-->
+</head>
+<body>
+    <h1 id="enunciado">Escribir el algoritmo que permite calcular la nota
+         correspondiente al primer parcial de “análisis” para un estudiante cualquiera.
+          Se debe considerar que hay dos talleres y un quiz, que en conjunto valen
+           un 30% de la nota y el resto (70%) corresponde a la nota del examen parcial.</h1>
+    <div>
+        <form name="calculo" action="">
+            <label for="fn"><b>Nota taller 1</b></label>
+            <input type="text" name="Nota_taller_1">
+            <label for="fn"><b>Nota taller 2</b></label>
+            <input type="text" name="Nota_taller_2">
+            <label for="fn"><b>Nota quiz</b></label>
+            <input type="text" name="quiz">
+            <label for="fn"><b>parcial</b></label>
+            <input type="text" name="parcial">
+            <input type="button" value="Calcular" onclick="funcion_calcular()">
+            </form>
+    </div>
+    <!--<script type="module" src="ejercicio_3.js"></script>-->
+   <script type="text/javascript">
+        function funcion_calcular()
+        {
+        var nota_1 = document.calculo.Nota_taller_1.value*1;
+        var nota_2 = document.calculo.Nota_taller_2.value*1;
+        var quiz = document.calculo.quiz.value*1;
+        var parcial = document.calculo.parcial.value*1;
+        var promedio= (nota_1 + nota_2 + quiz)/3;
+        var nota_final= promedio*30/100+parcial*70/100;
+        alert ('la nota final es: ' + nota_final);
+        }
+    </script>
+
+</body>
+</html>
