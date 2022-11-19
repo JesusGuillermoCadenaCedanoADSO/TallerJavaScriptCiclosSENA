@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10</title>
+    <link rel="stylesheet" type="text/css" href="../Style.css">
+</head>
+<body>
+    <ul>
+        <li><a href="../TallerCiclicas.html">INICIO </a></li>
+        <li><a href="#">Ejercicios </a>
+            <ul>
+                <li><a href="ejercicio_1.html">Ejercicio 1</a></li>
+                <li><a href="ejercicio_2.html">Ejercicio 2</a></li>
+                <li><a href="ejercicio_3.html">Ejercicio 3</a></li>
+                <li><a href="ejercicio_4.html">Ejercicio 4</a></li>
+                <li><a href="ejercicio_5.html">Ejercicio 5</a></li>
+                <li><a href="ejercicio_6.html">Ejercicio 6</a></li>
+                <li><a href="ejercicio_7.html">Ejercicio 7</a></li>
+                <li><a href="ejercicio_8.html">Ejercicio 8</a></li>
+                <li><a href="ejercicio_9.html">Ejercicio 9</a></li>
+                <li><a href="ejercicio_10.html">Ejercicio 10</a></li>
+            </ul>
+        </li>
+    </ul><br><br>
+    <h1 id="enunciado">10. Realizar un algoritmo que muestre por pantalla la tabla 
+        de multiplicar decreciente de cualquier número, ingresado entre el 1 y el 10.</h1>
+    <div>
+        <form name="calculo" action="">
+            <label for="fn"><b>Ingresar numero entre 1 y 10</b></label><br>
+            <input type="text" name="numero_ingresado"><br>
+            <label for="fn"><b>Hallar tabla de multiplicar</b></label><br>
+            <input type="button" value="Calcular tabla" onclick="funcion_calcular()"><br>
+            </form>
+    </div>
+    
+   <script type="text/javascript">
+        function funcion_calcular()
+        {   var numero = document.calculo.numero_ingresado.value*1;
+            if(1 <= numero <=10){
+                var contador = 10;
+                while(contador >= 1){
+                    producto = numero * contador;
+                    alert (numero + " x " + contador + " = " + producto);
+                    contador -= 1;
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
