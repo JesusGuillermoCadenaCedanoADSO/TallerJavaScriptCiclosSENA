@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+    <h1 id="enunciado">7. Hacer un programa que registre el consumo realizado por
+         los clientes de un restaurante, si el consumo de cada
+          cliente excede 50000 se hará un descuento del 20%.
+           Se debe mostrar el pago de cada cliente y el total de todos los pagos.</h1>
+    <div>
+        <form name="calculo" action="">
+            <label for="fn"><b>Numero de clientes</b></label><br>
+            <input type="text" name="Numero_clientes" value="5"><br>
+            <label for="fn"><b>Empezar a ingresar consumos</b></label><br>
+            <input type="button" value="Ingresar" onclick="funcion_calcular()">
+            </form>
+    </div>
+   <script type="text/javascript">
+        function funcion_calcular()
+        {
+            var numero_clientes = document.calculo.Numero_clientes.value*1;
+            var total_pagos = 0;
+            for (var i=0;i<numero_clientes;i++){
+
+                var pago_cliente = prompt("ingresar pago de cliente " + (i+1)*1 )*1;
+                if(pago_cliente > 50000){
+                    pago_cliente = pago_cliente*(1  - 0.2);
+                }
+                alert('pago de cliente ' + (i+1)*1 + " " + pago_cliente)
+                total_pagos += pago_cliente;
+            };
+
+            alert ('El precio total en pesos es ' +
+             new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'COP' }).format(total_pagos));
+        }
+    </script>
+
+</body>
+</html>

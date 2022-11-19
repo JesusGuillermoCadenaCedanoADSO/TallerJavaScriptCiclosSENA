@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+    <h1 id="enunciado">6. Hacer un programa que sume 5 precios de camisas
+         (en dólares) y que luego muestre el total de la venta en pesos. </h1>
+    <div>
+        <form name="calculo" action="">
+            <label for="fn"><b>Empezar a ingresar precios</b></label>
+            <input type="button" value="Ingresar" onclick="funcion_calcular()">
+            </form>
+    </div>
+   <script type="text/javascript">
+        function funcion_calcular()
+        {
+            var i=0;
+            var suma_en_dolares=0;
+            while(i<=5){
+                var precio_dolares = prompt("ingresar precio de camisa " + i  +" en dolares")*1;
+                suma_en_dolares += precio_dolares;
+                i += 1;
+            };
+            var dolar_a_peso = prompt("ingresar pesos equivalentes a un dolar ")*1;
+            var suma_en_pesos = suma_en_dolares * dolar_a_peso;
+            alert ('El precio total en pesos es ' +
+             new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'COP' }).format(suma_en_pesos));
+        }
+    </script>
+
+</body>
+</html>

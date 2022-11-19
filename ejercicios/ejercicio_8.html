@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+<body>
+    <h1 id="enunciado">8. Diseñar un algoritmo que permita ingresar la hora,
+         minutos y segundos, y que calcule la hora en el siguiente segundo</h1>
+    <div>
+        <form name="calculo" action="">
+            <label for="fn"><b>Ingresar hora</b></label><br>
+            <input type="text" name="hora"><br>
+            <label for="fn"><b>Ingresar minutos</b></label><br>
+            <input type="text" name="minutos"><br>
+            <label for="fn"><b>Ingresar segundos</b></label><br>
+            <input type="text" name="segundos"><br>
+            <label for="fn"><b>Calcular hora</b></label><br>
+            <input type="button" value="Calcular" onclick="funcion_calcular()">
+            </form>
+    </div>
+   <script type="text/javascript">
+        function funcion_calcular()
+        {   
+            var hora = document.calculo.hora.value*1;
+            var minutos = document.calculo.minutos.value*1;
+            var segundos = document.calculo.segundos.value*1;
+            var hora_a_segundos = hora * 3600;
+            var minutos_a_segundos = minutos * 60;
+            var segundos_totales = hora_a_segundos + minutos_a_segundos + segundos + 1;
+            var nueva_hora = segundos_totales % (24*60*60);
+
+            function cociente(dividendo, divisor){
+                var res = 1;
+                if(dividendo - divisor < 0){//caso base 1
+                res = 0;
+                }else if( dividendo - divisor == 0){//caso base 2
+                res = 1;
+                }else{
+                res = res + cociente(dividendo - divisor, divisor);
+                }
+                return res;
+            }
+
+            nueva_hora = cociente(nueva_hora,3600);
+
+            var nuevos_minutos = segundos_totales % (60*60);
+            nuevos_minutos =cociente(nuevos_minutos,60);
+            var nuevos_segundos = segundos_totales % 60;
+            if (nueva_hora   < 10) {nueva_hora   = "0"+nueva_hora;}
+            if (nuevos_minutos < 10) {nuevos_minutos = "0"+nuevos_minutos;}
+            if (nuevos_segundos < 10) {nuevos_segundos = "0"+nuevos_segundos;}
+            alert("la nueva hora es : "+nueva_hora+":"+nuevos_minutos+":"+nuevos_segundos);
+        }
+    </script>
+
+</body>
+</html>

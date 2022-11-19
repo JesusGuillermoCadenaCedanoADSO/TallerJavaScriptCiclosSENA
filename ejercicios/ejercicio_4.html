@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <h1 id="enunciado">4. Un capital C está situado a un tipo de interés R anual
+         ¿al término de cuántos años se doblará? </h1>
+    <div>
+        <form name="calculo" action="">
+            <label for="fn"><b>Capital</b></label>
+            <input type="text" name="Capital">
+            <label for="fn"><b>Interes</b></label>
+            <input type="text" name="Interes">
+            <input type="button" value="Calcular" onclick="funcion_calcular()">
+            </form>
+    </div>
+   <script type="text/javascript">
+        function funcion_calcular()
+        {
+        var capital = document.calculo.Capital.value*1;
+        var interes = document.calculo.Interes.value*1;
+        var capital_duplicado = capital * 2;
+        var dinero = capital/100 * interes;
+        var años = 0;
+        while(capital<=capital_duplicado){
+            capital += dinero;
+            años += 1;
+        }
+        alert ('el capital se ha duplicado en ' + años +" años");
+        }
+    </script>
+
+</body>
+</html>

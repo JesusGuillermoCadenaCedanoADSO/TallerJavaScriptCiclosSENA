@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+<body>
+    <h1 id="enunciado">9. Dado N, escribir el producto desde 1 hasta N</h1>
+    <div>
+        <form name="calculo" action="">
+            <label for="fn"><b>Empezar a calcular producto</b></label>
+            <input type="button" value="Ingresar" onclick="funcion_calcular()">
+            </form>
+    </div>
+   <script type="text/javascript">
+        function funcion_calcular()
+        {   var numero = prompt("digitar numero")*1;
+            var producto = 1;
+            for(var i=1;i<=numero;i++){
+               producto *= i;
+            };
+            alert ('El producto total es : ' + producto);
+        }
+    </script>
+
+</body>
+</html>

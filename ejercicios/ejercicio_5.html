@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <h1 id="enunciado">5. Elaborar un algoritmo que permita ingresar
+         20 números y muestre todos los números menores e iguales a 25.</h1>
+    <div>
+        <form name="calculo" action="">
+            <label for="fn"><b>Empezar a ingresar numeros</b></label>
+            <input type="button" value="Ingresar" onclick="funcion_calcular()">
+            </form>
+    </div>
+   <script type="text/javascript">
+        function funcion_calcular()
+        {
+            var i=0;
+            while(i<=19){
+                var numero = prompt("digitar numero")*1;
+                if (numero <= 25){
+                   alert(numero + " es menor o igual a 25");
+                };
+                i += 1;
+            };
+            alert ('Fin del programa');
+        }
+    </script>
+
+</body>
+</html>
