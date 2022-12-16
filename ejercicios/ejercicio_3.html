@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 3</title>
     <link rel="stylesheet" type="text/css" href="../Style.css">
+    <style>
+        .hidden-content{
+            display: none;
+        }
+        .hidden-content.reveal-btn{
+            display: block;
+        }
+        .container {
+            width: 50%;
+            padding: 12px;
+        }
+    </style>
 </head>
 <body>
     <ul>
@@ -32,28 +44,23 @@
     <div>
         <form name="calculo" action="">
             <label for="fn"><b>Nota taller 1</b></label><br>
-            <input type="text" name="Nota_taller_1"><br>
+            <input class="N1" type="text" name="Nota_taller_1"><br>
             <label for="fn"><b>Nota taller 2</b></label><br>
-            <input type="text" name="Nota_taller_2"><br>
+            <input class="N2" type="text" name="Nota_taller_2"><br>
             <label for="fn"><b>Nota quiz</b></label><br>
-            <input type="text" name="quiz"><br>
+            <input class="QUIZZ"type="text" name="quiz"><br>
             <label for="fn"><b>parcial</b></label><br>
-            <input type="text" name="parcial"><br>
-            <input type="button" value="Calcular" onclick="funcion_calcular()">
+            <input class="PARCIAL" type="text" name="parcial"><br>
+            <button class="btn-Calcular">Calcular</button>
             </form>
     </div>
-   <script type="text/javascript">
-        function funcion_calcular()
-        {
-        var nota_1 = document.calculo.Nota_taller_1.value*1;
-        var nota_2 = document.calculo.Nota_taller_2.value*1;
-        var quiz = document.calculo.quiz.value*1;
-        var parcial = document.calculo.parcial.value*1;
-        var promedio= (nota_1 + nota_2 + quiz)/3;
-        var nota_final= promedio*30/100+parcial*70/100;
-        alert ('la nota final es: ' + nota_final);
-        }
-    </script>
-
+    <div class ="container">
+        <button class="reveal-btn">ver diagrama de flujo</button>
+        <div class="hidden-content">
+            <h3>Diagrama de flujo</h3>
+            <img src="img/Punto3.jpg">
+        </div>
+    </div>
+    <script src="ejercicio_3.js"></script>
 </body>
 </html>

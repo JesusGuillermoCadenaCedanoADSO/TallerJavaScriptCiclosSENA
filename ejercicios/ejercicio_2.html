@@ -30,17 +30,11 @@
     <div>
         <form name="calculo" action="">
             <label><b></b></label>
-            <input type="text" name="temperatura_celcius">
-            <input type="button" value="Calcular" onclick="funcion_calcular()">
-            </form>
+            <input class="TC"  type="text" name="temperatura_celcius">
+            <button class="btn-Calcular">Calcular</button>
+        </form>
     </div>
-    <script type="text/javascript">
-        function funcion_calcular()
-        {
-        var Tcelcius = document.calculo.temperatura_celcius.value;
-        var Tfahrenheit= Tcelcius*9/5+32;
-        alert ('la temperatura fahrenheit es: ' + Tfahrenheit);
-        }
-    </script>
+    <p id="respuesta"></p>
+    <script src="ejercicio_2.js"></script>
 </body>
 </html>
